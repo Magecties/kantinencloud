@@ -1,52 +1,23 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
 
-<div class="text-center">
-    <h1 class="display-4">Kantinens Menu for uge 45</h1>
-    
+<h2>Kantinens Menu</h2>
 <table>
-  <tr>
-    <th>Dag</th>
-    <th>Varm Ret</th>
-    <th>Kold Ret</th>
-  </tr>
-  <tr>
-    <td>Man</td>
-    <td>Varm suppe</td>
-    <td>Kold suppe</td>
-  </tr>
-  <tr>
-    <td>Tirs</td>
-    <td>Varm æble</td>
-    <td>Kold æble</td>
-  </tr>
-  <tr>
-    <td>Ons</td>
-    <td>Pasta</td>
-    <td>Pasta kold</td>
-  </tr>
-  <tr>
-    <td>Tors</td>
-    <td>Varm lasagne</td>
-    <td>Kold lasagne</td>
-  </tr>
-  <tr>
-    <td>Fre</td>
-    <td>Chili con carne</td>
-    <td>Quinoasalat</td>
-  </tr>
-  <tr>
-    <td>Lør</td>
-    <td>Grillet kylling</td>
-    <td>Caesarsalat</td>
-  </tr>
-  <tr>
-    <td>Søn</td>
-    <td>Stegt flæsk</td>
-    <td>Kartoffelsalat</td>
-  </tr>
+    <thead>
+        <tr>
+            <th>Dag</th>
+            <th>Varm Ret</th>
+            <th>Kold Ret</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MenuItems)
+        {
+            <tr>
+                <td>@item.Dag</td>
+                <td>@item.VarmRet</td>
+                <td>@item.KoldRet</td>
+            </tr>
+        }
+    </tbody>
 </table>
-</div>
