@@ -1,6 +1,62 @@
 ﻿@page
 @model IndexModel
 
+  <style>
+        body {
+            background-color: #6f4f28; /* Brown background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif; /* Clean font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3e2b1f; /* Darker brown header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        footer {
+            background-color: #3e2b1f; /* Dark brown footer */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        a {
+            color: #f0e68c; /* Light yellow links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffcc00; /* Bright yellow on hover */
+        }
+
+        button {
+            background-color: #8b4513; /* Brown button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a0522d; /* Lighter brown on hover */
+        }
+    </style>
+
 <h2>Kantinens Menu</h2>
 <table>
     <thead>
